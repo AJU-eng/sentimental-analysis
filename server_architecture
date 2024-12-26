@@ -1,0 +1,10 @@
+digraph "Server Architecture" {
+	Client [label="Client (Browser/App)" color=lightblue shape=box style=filled]
+	PHP [label="PHP Server (Main)" color=lightgreen shape=box style=filled]
+	Python [label="Python NLP Server" color=orange shape=box style=filled]
+	MySQL [label="MySQL Database" color=lightgrey shape=cylinder style=filled]
+	Client -> PHP [label="HTTPS Request"]
+	PHP -> Python [label="REST API/gRPC"]
+	PHP -> MySQL [label="Database Query"]
+	Python -> MySQL [label="Database Query/Update"]
+}
