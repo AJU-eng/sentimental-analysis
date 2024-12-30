@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/*": {
+        "runtime": "python3.9"
+      }
+    }
+  }
+  
