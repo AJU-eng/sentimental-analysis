@@ -112,17 +112,17 @@ def analyze_review():
         feature_summary.append({
             "feature": feature["feature"],
             "sentiment": feature["sentiment"],
-            "context": feature["context"],
-            "confidence": round(feature["confidence"], 2),
-            "supporting_words": feature["sentiment_words"]
+            # "context": feature["context"],
+            # "confidence": round(feature["confidence"], 2),
+            # "supporting_words": feature["sentiment_words"]
         })
 
     response = {
-        "review": review_text,
-        "overall_sentiment": {
-            "score": round(overall_score, 2),
-            "label": "Positive" if overall_score > 0.6 else "Negative" if overall_score < 0.4 else "Neutral"
-        },
+        # "review": review_text,
+        # "overall_sentiment": {
+        #     "score": round(overall_score, 2),
+        #     "label": "Positive" if overall_score > 0.6 else "Negative" if overall_score < 0.4 else "Neutral"
+        # },
         "features": feature_summary
     }
     
